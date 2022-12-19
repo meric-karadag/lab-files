@@ -94,7 +94,8 @@ def seq_search2(x, L):
     return False
 
 def bubble_sort(L):
-    '''performs bubble sorting (sorting mechanism depends on consecutive comparisons)'''
+    '''performs bubble sorting (sorting mechanism depends on consecutive comparisons)
+    after one iteration ensures that the largest item is in the correct place'''
     length = len(L)
     changed = True
     while changed:
