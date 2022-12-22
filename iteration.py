@@ -51,7 +51,7 @@ def perfect_numbers(x):
     result = (perf,defic,abund)
     return result
 
-print(perfect_numbers(8))
+#print(perfect_numbers(8))
 
 def pascal(x):
     results = [[] for i in range(x)]
@@ -60,7 +60,7 @@ def pascal(x):
     # nCr = n!/((n-r)!*r!)
             results[i].append(factorial(i)//(factorial(j)*factorial(i-j)))
     return results
-print(pascal(3))
+#print(pascal(3))
 
 def histogram(lst, bin):
     sorted(list(lst))
@@ -70,4 +70,15 @@ def histogram(lst, bin):
             results[i].append(lst[i*(len(lst)//bin)+j])
     return results
 
-print(histogram(range(100), 10))
+#print(histogram(range(100), 10))
+
+def split(text, delimiters):
+    results = []
+    size = 0
+    for i in range(len(text)):
+        if text[i] in delimiters:
+            results.append(text[i-size:i])
+            size = 0
+        size += 1
+    return results
+print(split('c,e,n,g,111,140', [',']))
